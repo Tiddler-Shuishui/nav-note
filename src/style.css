@@ -18,6 +18,19 @@ ol {
   list-style: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 /* style */
 body {
   background: #eee;
@@ -25,21 +38,24 @@ body {
 
 .globalHeader {
   margin: 20px;
-  display: flex;
-  justify-content: space-between;
-
 }
 
-.globalHeader>input {
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchForm>input {
   width: 100%;
   margin-right: 20px;
   height: 40px;
   border: 1px solid #ddd;
   border-radius: 4px;
-
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.globalHeader>button {
+.searchForm>button {
   white-space: nowrap;
   padding: 0 28px;
   border: none;
