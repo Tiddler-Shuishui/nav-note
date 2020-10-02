@@ -3,11 +3,11 @@ const $lastLi = $siteList.find('li.addButton')
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [{
-    logo: 'A',
+    logo: 'https://www.acfun.cn/favicon.ico',
     url: 'https://www.acfun.cn'
   },
   {
-    logo: 'B',
+    logo: 'https://www.bilibili.com/favicon.ico',
     url: 'https://www.bilibili.com'
   }
 ]
@@ -21,7 +21,9 @@ const render = () => {
   hashMap.forEach((node, index) => {
     const $li = $(`<li>
         <div class="site">
-          <div class="logo">${node.logo[0]}</div>
+          <div class="logo">
+          <img width=32 title alt src="${node.logo}">
+          </div>
           <div class="link">${simplifyUrl(node.url)}</div>
           <div class="close">
             <svg class="icon">
@@ -52,7 +54,7 @@ $('.addButton')
         url = 'https://' + url
       }
       hashMap.push({
-        logo: simplifyUrl(url)[0],
+        logo: 'http://' + simplifyUrl(url) + '/favicon.ico',
         url: url
       })
       render()
@@ -61,7 +63,6 @@ $('.addButton')
   })
 
 window.onbeforeunload = () => {
-  console.log('页面要关闭了');
   const string = JSON.stringify(hashMap)
   localStorage.setItem('x', string)
 }
