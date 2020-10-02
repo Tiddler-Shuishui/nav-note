@@ -9,6 +9,34 @@ const hashMap = xObject || [{
   {
     logo: 'http://www.iconfont.cn/favicon.ico',
     url: 'https://www.iconfont.cn/'
+  },
+  {
+    logo: 'http://stackoverflow.com/favicon.ico',
+    url: 'https://stackoverflow.com/'
+  },
+  {
+    logo: 'http://www.zhihu.com/favicon.ico',
+    url: 'https://www.zhihu.com/'
+  },
+  {
+    logo: 'https://www.yuque.com/favicon.ico',
+    url: 'https://www.yuque.com/'
+  },
+  {
+    logo: 'https://jsbin.com/favicon.ico',
+    url: 'https://jsbin.com/'
+  },
+  {
+    logo: 'https://es6.ruanyifeng.com/favicon.ico',
+    url: 'https://es6.ruanyifeng.com/'
+  },
+  {
+    logo: 'https://www.sass.hk/favicon.ico',
+    url: 'https://www.sass.hk/'
+  },
+  {
+    logo: 'https://developer.mozilla.org/favicon.ico',
+    url: 'https://developer.mozilla.org/'
   }
 ]
 
