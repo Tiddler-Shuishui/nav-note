@@ -45,6 +45,32 @@ body {
   justify-content: space-between;
 }
 
+
+
+@media (min-width: 700px) {
+  .globalHeader {
+    margin: 60px 0 80px;
+  }
+
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .globalMain .siteList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .globalMain .siteList {
+    width: 800px;
+  }
+}
+
 .searchForm>input {
   width: 100%;
   margin-right: 20px;
@@ -68,7 +94,6 @@ body {
 .globalMain {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .siteList {

@@ -47,14 +47,17 @@ render()
 $('.addButton')
   .on('click', () => {
     let url = window.prompt('请问你要添加的网址是啥？')
-    if (url.indexOf('http') !== 0) {
-      url = 'https://' + url
+    if (url.length !== 0) {
+      if (url.indexOf('http') !== 0) {
+        url = 'https://' + url
+      }
+      hashMap.push({
+        logo: simplifyUrl(url)[0],
+        url: url
+      })
+      render()
     }
-    hashMap.push({
-      logo: simplifyUrl(url)[0],
-      url: url
-    })
-    render()
+
   })
 
 window.onbeforeunload = () => {
