@@ -18,7 +18,7 @@ const simplifyUrl = (url) => {
 
 const render = () => {
   $siteList.find('li:not(.addButton)').remove()
-  hashMap.forEach(node => {
+  hashMap.forEach((node, index) => {
     const $li = $(`<li>
         <div class="site">
           <div class="logo">${node.logo[0]}</div>
@@ -35,7 +35,9 @@ const render = () => {
       window.open(node.url)
     })
     $li.on('click', '.close', (e) => {
-      e.stopPropagation()
+      e.stopPropagation() //阻止冒泡
+      hashMap.splice(index, 1)
+      render()
     })
   })
 }
