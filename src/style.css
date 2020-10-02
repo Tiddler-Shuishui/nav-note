@@ -132,12 +132,20 @@ body {
 .siteList .site>.link {
   font-size: 14px;
   margin-top: 4px;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .siteList .site>.close {
   position: absolute;
   right: 5px;
   top: 0;
+  display: none;
+}
+
+.siteList .site:hover>.close {
+  display: block;
 }
 
 .siteList .addButton {

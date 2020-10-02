@@ -3,12 +3,12 @@ const $lastLi = $siteList.find('li.addButton')
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [{
-    logo: 'https://www.acfun.cn/favicon.ico',
-    url: 'https://www.acfun.cn'
+    logo: 'http://gitee.com/favicon.ico',
+    url: 'https://gitee.com'
   },
   {
-    logo: 'https://www.bilibili.com/favicon.ico',
-    url: 'https://www.bilibili.com'
+    logo: 'http://www.iconfont.cn/favicon.ico',
+    url: 'https://www.iconfont.cn/'
   }
 ]
 
@@ -33,9 +33,12 @@ const render = () => {
         </div>
       <div>
     </li>`).insertBefore($lastLi)
-    $li.on('click', () => {
-      window.open(node.url)
-    })
+    $li.on(
+      'click', () => {
+        window.open(node.url)
+      }
+    )
+
     $li.on('click', '.close', (e) => {
       e.stopPropagation() //阻止冒泡
       hashMap.splice(index, 1)
@@ -59,7 +62,6 @@ $('.addButton')
       })
       render()
     }
-
   })
 
 window.onbeforeunload = () => {
