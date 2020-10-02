@@ -20,18 +20,20 @@ const render = () => {
   $siteList.find('li:not(.addButton)').remove()
   hashMap.forEach(node => {
     const $li = $(`<li>
-      <a href="${node.url}">
         <div class="site">
           <div class="logo">${node.logo[0]}</div>
           <div class="link">${simplifyUrl(node.url)}</div>
           <div class="close">
-          <svg class="icon">
-    <use xlink:href="#icon-close"></use>
-</svg></div>
+            <svg class="icon">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </div>
         </div>
-      </a>
       <div>
     </li>`).insertBefore($lastLi)
+    $li.on('click', () => {
+      window.open(node.url)
+    })
     $li.on('click', '.close', (e) => {
       e.stopPropagation()
     })
